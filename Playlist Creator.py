@@ -52,11 +52,11 @@ for titulo, artista in songs:
     if items:
         track_id = items[0]["id"]
         track_ids.append(track_id)
-        print(f"Encontrado: {titulo} - {artista}")
+        print(f"Found: {titulo} - {artista}")
     else:
-        print(f"No encontrado: {titulo} - {artista}")
+        print(f"Not found: {titulo} - {artista}")
 
 # Add tracks to the playlist (Spotify allows up to 100 per request)
 if track_ids:
     sp.playlist_add_items(playlist_id, track_ids)
-    print("¡Playlist creada exitosamente!")
+    print("Playlist created successfully!")
